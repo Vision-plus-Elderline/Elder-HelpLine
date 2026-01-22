@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "project": "Elder Line Assessment Platform",
+    "date": "2025-12-30",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "Elder Line Assessment Platform is a comprehensive system designed to evaluate user knowledge through timed assessments, monitor performance with real-time analytics, and provide a detailed admin dashboard for compliance and topic focus insights. It supports user authentication and profile tracking to cater to organizational needs.",
+  "core_goals": [
+    "Deliver a secure and user-friendly assessment engine for knowledge testing with timed questions and result computation.",
+    "Enable administrators to analyze user performance through an intuitive dashboard containing compliance charts and topic suggestions.",
+    "Provide real-time analytics to monitor platform usage including visitor activity and session metrics.",
+    "Support full user lifecycle management including signup, login, and detailed profile handling with employee identification.",
+    "Ensure a responsive and engaging landing page that works seamlessly across devices to attract and guide users."
+  ],
+  "key_features": [
+    "Admin Dashboard presenting user performance analytics, compliance charts, and topic focus recommendations.",
+    "User Authentication and Profile Management including employee ID tracking and secure signup/login.",
+    "Assessment Engine with timed questions, real-time answer processing, and comprehensive result generation.",
+    "Real-time Analytics powered by WebSocket for live monitoring of page views, visitor count, and activity timestamps.",
+    "Mobile-optimized Responsive Landing Page with hero carousel and intuitive navigation for enhanced user engagement."
+  ],
+  "user_flow_summary": [
+    "Users land on the responsive home page where they can navigate to signup or login.",
+    "Authenticated users access the assessment engine to complete timed tests consisting of multiple question cards.",
+    "Upon test completion, users receive immediate results and performance feedback.",
+    "Administrators log into the Admin Dashboard to review analytics on user performance and compliance.",
+    "Real-time analytics data updates continuously to provide live insights into user activity across the platform."
+  ],
+  "validation_criteria": [
+    "Users must be able to successfully signup and login with employee ID verification.",
+    "Timed assessments should enforce time limits accurately and calculate scores correctly.",
+    "Admin Dashboard must display up-to-date analytics and compliance data without errors.",
+    "Real-time WebSocket analytics should reflect live page views and visitor statistics.",
+    "The landing page must be fully responsive and functional on all supported devices and screen sizes."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Supabase",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Recharts",
+      "Lucide React",
+      "Radix UI"
+    ],
+    "features": [
+      {
+        "name": "Admin Dashboard",
+        "description": "Comprehensive dashboard for admins to view user performance analysis, compliance charts, and topic focus suggestions.",
+        "files": [
+          "src/components/Admin.tsx",
+          "src/components/Analytics.tsx"
+        ]
+      },
+      {
+        "name": "User Authentication & Profiles",
+        "description": "User signup, login, and detailed profile management including employee ID tracking.",
+        "files": [
+          "src/pages/Auth.tsx",
+          "src/components/UserDetailsForm.tsx",
+          "src/hooks/useAuth.tsx"
+        ]
+      },
+      {
+        "name": "Assessment Engine",
+        "description": "System for presenting questions, timing tests, and calculating results based on user answers.",
+        "files": [
+          "src/components/TestInterface.tsx",
+          "src/components/QuestionCard.tsx",
+          "src/components/ResultCard.tsx",
+          "src/data/questions.ts"
+        ]
+      },
+      {
+        "name": "Real-time Analytics",
+        "description": "WebSocket-based monitoring of page views, visitors, and generation timestamps.",
+        "files": [
+          "src/components/EnhaceFooter.tsx"
+        ]
+      },
+      {
+        "name": "Responsive Landing Page",
+        "description": "Mobile-optimized home page with hero carousel and navigation.",
+        "files": [
+          "src/components/Hero.tsx",
+          "src/components/CarasoulHero.tsx",
+          "src/components/Header.tsx"
+        ]
+      }
+    ]
+  }
+}

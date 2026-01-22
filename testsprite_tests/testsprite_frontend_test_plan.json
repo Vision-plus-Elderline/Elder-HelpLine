@@ -1,0 +1,297 @@
+[
+  {
+    "id": "TC001",
+    "title": "User Signup with Valid Employee ID",
+    "description": "Verify that a new user can successfully signup by providing valid details including a verified employee ID.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the signup page from the landing page."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid user details including a unique employee ID."
+      },
+      {
+        "type": "action",
+        "description": "Submit the signup form."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that signup is successful and user is redirected to the authenticated home or assessment page."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "User Signup with Invalid Employee ID",
+    "description": "Verify that signup fails when an invalid or unrecognized employee ID is used.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the signup page."
+      },
+      {
+        "type": "action",
+        "description": "Enter user details with an invalid or incorrectly formatted employee ID."
+      },
+      {
+        "type": "action",
+        "description": "Submit the signup form."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that an error message is displayed indicating invalid employee ID and signup is rejected."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "User Login with Correct Credentials",
+    "description": "Verify that registered users can login successfully using their employee ID and password.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Input valid employee ID and password."
+      },
+      {
+        "type": "action",
+        "description": "Click the login button."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the user is authenticated and redirected to the assessment dashboard."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "User Login with Incorrect Credentials",
+    "description": "Verify login fails with incorrect or invalid employee ID or password.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Input invalid employee ID or password."
+      },
+      {
+        "type": "action",
+        "description": "Click the login button."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that an error message appears indicating failed login attempt and no access is granted."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Complete Timed Assessment Successfully",
+    "description": "Verify that authenticated users can take and complete a timed assessment, with correct timing enforcement and result calculation.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as an authenticated user and navigate to the assessment engine."
+      },
+      {
+        "type": "action",
+        "description": "Start a timed test with multiple question cards."
+      },
+      {
+        "type": "action",
+        "description": "Answer all questions within the allocated time."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the timer counts down accurately without skipping or freezing."
+      },
+      {
+        "type": "action",
+        "description": "Submit the test upon completion."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that calculated results are displayed immediately with correct scoring and feedback."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Timed Assessment Enforces Time Limit",
+    "description": "Verify the assessment engine automatically ends the test when the time expires and calculates results accordingly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login and start the timed assessment."
+      },
+      {
+        "type": "action",
+        "description": "Delay answering to exceed the allocated time limit."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the test automatically ends once the time expires."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that partial answers are scored correctly and results are shown."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Admin Dashboard Displays Up-to-Date Analytics",
+    "description": "Verify that admin users can log in and see real-time updated charts for user performance, compliance, and topic suggestions without errors.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as an administrator and navigate to the Admin Dashboard."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify performance analytics charts load correctly and reflect latest data."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm compliance charts and topic focus suggestions are visible and error-free."
+      },
+      {
+        "type": "action",
+        "description": "Perform assessment activity as users and observe Dashboard updates."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the dashboard data updates in real-time or near real-time with new user data."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Real-Time WebSocket Analytics Update Correctly",
+    "description": "Verify that the real-time analytics system updates visitor counts, page views, and timestamps via WebSocket without data loss or delay.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open multiple sessions (browser tabs or different devices) accessing various pages of the platform."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the visitor count and page views increment and decrement correctly as users connect and disconnect."
+      },
+      {
+        "type": "assertion",
+        "description": "Check timestamps of activity update continuously and reflect live interaction."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Landing Page Responsiveness Across Devices",
+    "description": "Verify that the landing page layout, hero carousel, and navigation are fully responsive and functional on desktop, tablet, and mobile screen sizes.",
+    "category": "ui",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the landing page on multiple devices or use browser developer tools to simulate various screen sizes."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the landing page content adapts correctly without horizontal scroll or layout breakage."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the hero carousel functions smoothly with navigation controls visible and operable."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that navigation links to signup and login are always accessible and usable."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Profile Management Data Persistence",
+    "description": "Verify that users can update their profile details including employee ID and that changes persist after logout and login.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as user and navigate to profile management."
+      },
+      {
+        "type": "action",
+        "description": "Modify profile fields such as employee ID and other personal information."
+      },
+      {
+        "type": "action",
+        "description": "Save the updated profile."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm a success message is shown and profile data is updated on the UI."
+      },
+      {
+        "type": "action",
+        "description": "Logout and login again."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the updated profile information is correctly persisted and displayed."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Handle Network Interruptions During Assessment",
+    "description": "Verify how the system behaves if the network connection is lost during a timed assessment, including attempt to resume or save progress.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start a timed assessment and answer a few questions."
+      },
+      {
+        "type": "action",
+        "description": "Simulate network disconnection."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the system warns user about connection loss and attempts to save progress if possible."
+      },
+      {
+        "type": "action",
+        "description": "Restore network connection."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the assessment either resumes correctly or data is saved and test can be resumed appropriately."
+      }
+    ]
+  }
+]

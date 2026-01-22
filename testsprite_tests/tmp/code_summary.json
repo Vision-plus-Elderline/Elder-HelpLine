@@ -1,0 +1,30 @@
+{
+  "tech_stack": ["TypeScript", "React", "Vite", "Supabase", "Tailwind CSS", "Shadcn UI", "Recharts", "Lucide React", "Radix UI"],
+  "features": [
+    {
+      "name": "Admin Dashboard",
+      "description": "Comprehensive dashboard for admins to view user performance analysis, compliance charts, and topic focus suggestions.",
+      "files": ["src/components/Admin.tsx", "src/components/Analytics.tsx"]
+    },
+    {
+      "name": "User Authentication & Profiles",
+      "description": "User signup, login, and detailed profile management including employee ID tracking.",
+      "files": ["src/pages/Auth.tsx", "src/components/UserDetailsForm.tsx", "src/hooks/useAuth.tsx"]
+    },
+    {
+      "name": "Assessment Engine",
+      "description": "System for presenting questions, timing tests, and calculating results based on user answers.",
+      "files": ["src/components/TestInterface.tsx", "src/components/QuestionCard.tsx", "src/components/ResultCard.tsx", "src/data/questions.ts"]
+    },
+    {
+      "name": "Real-time Analytics",
+      "description": "WebSocket-based monitoring of page views, visitors, and generation timestamps.",
+      "files": ["src/components/EnhaceFooter.tsx"]
+    },
+    {
+      "name": "Responsive Landing Page",
+      "description": "Mobile-optimized home page with hero carousel and navigation.",
+      "files": ["src/components/Hero.tsx", "src/components/CarasoulHero.tsx", "src/components/Header.tsx"]
+    }
+  ]
+}

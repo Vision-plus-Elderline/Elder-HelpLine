@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:8080/admin",
+  "loginUser": "Moh375",
+  "loginPassword": "123456789",
+  "executionArgs": {
+    "projectName": "old health",
+    "projectPath": "c:\\Users\\user\\Documents\\old health",
+    "testIds": [],
+    "additionalInstruction": "Test the core user flow: signup, completing an assessment, and viewing the admin dashboard. Ensure charts in the admin dashboard render correctly and mobile responsiveness is maintained.",
+    "envs": {
+      "API_KEY": "sk-user-s5T-BHc_yp_ftTEy-buqfadxu7EQhUzGa8flBNfYuZNt8DuSUU0QAOM-uJOMOBypZ_gT8SA2EKt5mSbg4zjzWMBFC8-FyNip3S5cFQN06GZRQwakCyQO1HCDQ3tUtqltFNA"
+    }
+  },
+  "proxy": "http://173f0257-4f16-4171-84bc-a02bffce6c5d:l2oB6CZO7WbpCW48uh8YNC8w6S4qXUfL@tun.testsprite.com:8080"
+}
